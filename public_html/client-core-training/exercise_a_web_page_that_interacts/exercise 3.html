@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Exercise 3</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- CSS -->
+        <style type="text/css">
+            h1{
+                background-color: #7C8B9B;
+                color: white;
+            }
+            body{
+                background-color: #E5EBDF;
+            }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                  $("#guffaws").focus();
+                  $("#output").hide();
+                  $("#button").click(function(){
+                    guffaws = $("#guffaws").val();
+                    belly = $("#belly").val();
+                    people = $("#people").val();
+                    revenue = (parseFloat(guffaws * 0.8) + parseFloat(belly * 1.1)) * people;
+                    $("#revenue").text(revenue);
+                    $("#guffaws").focus();
+                    $("#output").show('medium');
+                  });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Paula's Clowning Estimatronical<br>
+            Numeratoid
+        </h1>
+        <p>
+            Guffaws (average per person)<br>
+            <input type="text" id="guffaws">
+            x 0.80
+        </p>
+        <p>
+            Belly laughs (average per person)<br>
+            <input type="text" id="belly">
+            x 1.10
+        </p>
+        <p>
+            Number of people<br>
+            <input type="text" id="people">
+        </p>
+        <p><button type="button" id="button">Start the Numeratoid</button></p>
+        <p id="output"><strong>Revenue: </strong><span id="revenue"></span></p>
+    </body>
+</html>

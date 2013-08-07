@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" 
+                src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        </script>
+        <title>Secret of Life</title>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#secret").hide()
+                $("#secret_instructions").click(function() {
+                    $("#secret").show('fast');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="secret_instructions">Click me to learn the secret of a happy life.</p>
+        <h1 id="secret">Dogs!</h1>
+    </body>
+</html>

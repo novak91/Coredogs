@@ -1,0 +1,72 @@
+body{
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    background-color: #FFFFEE;
+/*Correct answers*/
+}
+#q1_correct {
+    color: green;
+}
+#q2_correct {
+    color: green;
+}
+#q3_correct {
+    color: green;
+}
+#q4_correct {
+    color: green;
+}
+#q5_correct {
+    color: green;
+/*Incorrect answers*/
+}
+#q1_incorrect {
+    color: red;
+}
+#q2_incorrect {
+    color: red;
+}
+#q3_incorrect {
+    color: red;
+}
+#q4_incorrect {
+    color: red;
+}
+#q5_incorrect {
+    color: red;
+}
+/*Q1 answers */
+.q1_right{
+    cursor: pointer;
+}
+.q1_wrong{
+    cursor: pointer;
+}
+/*Q2 answers */
+.q2_right{
+    cursor: pointer;
+}
+.q2_wrong{
+    cursor: pointer;
+}
+/*Q2 answers */
+.q3_right{
+    cursor: pointer;
+}
+.q3_wrong{
+    cursor: pointer;
+}
+/*Q4 answers */
+.q4_right{
+    cursor: pointer;
+}
+.q4_wrong{
+    cursor: pointer;
+}
+/*Q5 answers */
+.q5_right{
+    cursor: pointer;
+}
+.q5_wrong{
+    cursor: pointer;
+}

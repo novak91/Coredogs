@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Exercise 12</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                right_answer = parseInt(Math.random() * 100) + 1;
+                $("#input").focus();
+                $("#button").click(function(){
+                    var number = $("#input").val();
+                    if ( number ==''){
+                        alert('Please enter your guess');
+                    }
+                    else if ( isNaN(number)){
+                        alert('Please enter only number');
+                    }
+                    else if( number > right_answer){
+                        $("#guess").text(number + ' is too high!');
+                    }
+                    else if ( number < right_answer){
+                        $("#guess").text(number + ' is too low!');
+                    }
+                    else if ( number == right_answer){
+                        $("#guess").text('YOU GOT IT!');
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Guess My Number</h1>
+        <p>
+            I am thinking of a whole number between 1 and 100. What is it?
+        </p>
+        <p>
+            <input id="input" type="text"> <button type="button" id="button">Guess</button>
+        </p>
+        <p>
+            <span id="guess"></span>
+        </p>
+    </body>
+</html>

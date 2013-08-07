@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Exercise 1</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#input").focus();
+                $("#")
+                $("#button").click(function(){
+                    number = $("#input").val();
+                    number = 1/number
+                    $("#invert").text('Invert is: ' + number);
+                    
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Calculate Invert of a number</h1>
+        <p>Please enter number
+            <input type="text" id="input">
+        </p>
+        <p><button type="button" id="button">Calculate</button>
+        <p id="invert"></p>
+    </body>
+</html>

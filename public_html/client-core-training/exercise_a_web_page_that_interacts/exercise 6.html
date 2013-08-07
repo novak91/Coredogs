@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Exercise 6</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#d").focus();
+                $("#button").click(function(){
+                    d = $("#d").val();
+                    if (d < 0) {
+                        alert('Please enter number higher than zero');
+                    }
+                    else if (isNaN (d)) {
+                        alert('Please enter a number');
+                    }
+                    else if (d == '') {
+                        alert('Please enter a number');
+                    }
+                    else if (d > 0){
+                    c = d * Math.PI;
+                    $("#c").text('The circumference of the circle is ' + c);
+                    area = (d/2) * (d/2) * Math.PI
+                    $("#area").text('The area of the circle is ' + area);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Circumference  and area of a circle</h1>
+        <p><strong>Theory:</strong> 
+        <p>
+            Circumference is the linear distance around the outside<br>
+            of a closed curve or circular object. The circumference of a circle is the length <br>
+            around it.
+        </p>
+        <p> 
+            Area is a quantity that expresses the extent of a two-dimensional surface (such as <br>
+            circle) or shape in the plane.
+        </p>
+        <p>
+            <strong>Formula (circumference): </strong> c = &#928 * d <br>
+            <strong>Formula (area): </strong> A = &#928 * r<sup>2</sup><br>
+            where:<br>
+        <ul>
+            <li>c = circumference</li>
+            <li>&#928 = pi</li>
+            <li>d = diameter</li>
+            <li>A = area</li>
+            <li>r = radius</li>
+        </ul>            
+        </p>
+        <h4>Calculate the circumference of a circle <strong>c</strong> and area <strong>A</strong></h4>
+        <p>Enter length of diameter <strong>d</strong>
+            <input type="text" id="d">
+        </p>
+        <p><button type="button" id="button">Calculate</button>
+        <p id="c"></p>
+        <p id="area"></p>
+</body>
+</html>

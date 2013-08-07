@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Favorite Game</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#game_in").focus();
+                $("#go").click(function() {
+                    user_game = $("#game_in").val();
+                    $("#game_out").text(user_game);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Favorite Game</h1>
+        <p>Please enter the name of your favorite game
+            (e.g., fetch, frisbee, chewing shoes). Then click the button.</p>
+        <p>Game:
+            <input type="text" id="game_in">
+            <button type="button" id="go">Go</button>
+        </p>
+        <p>Favorite game: <span id="game_out"></span></p>
+    </body>
+</html>

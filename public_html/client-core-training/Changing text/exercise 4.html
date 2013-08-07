@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <title>Which technology?</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            .html:hover, .css:hover, .javascript:hover {
+                cursor: pointer;
+                color: red;
+            }
+            .highlight {
+                color: greenyellow;
+            }
+        </style>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $(".html").click(function(){
+                  $("#html_id").addClass("highlight");
+                  $("#javascript_id").removeClass("highlight");
+                  $("#css_id").removeClass("highlight");
+               });
+               $(".css").click(function(){
+                  $("#html_id").removeClass("highlight");
+                  $("#javascript_id").removeClass("highlight");
+                  $("#css_id").addClass("highlight");
+               });
+               $(".javascript").click(function(){
+                  $("#html_id").removeClass("highlight");
+                  $("#javascript_id").addClass("highlight");
+                  $("#css_id").removeClass("highlight");
+               });              
+            });
+        </script>
+    </head>
+    <body>
+        <h3>Click to see the technology</h3>
+        <uL>
+            <li class="html">&#60; title &#62;</li>
+            <li class="css">&#60; style &#62;</li>
+            <li class="javascript"> $(document).ready(function(){})</li>
+        </ul>
+        <p id="html_id">HTML</p>
+        <p id="javascript_id">Javascript</p>
+        <p id="css_id">CSS</p>
+    </body>
+</html>

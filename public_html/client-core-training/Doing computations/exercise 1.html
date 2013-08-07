@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <title>Doing Computations</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#mealcost").focus();
+                $("#compute").click(function(){
+                    //premenna ucet
+                    varmealcost = $("#mealcost").val();
+                    //premenna trinkgeld
+                    vartip = varmealcost*0.12;
+                    //premenna sucet ucet+trinkgeld 
+                    vartotal = parseFloat(vartip) + parseFloat(varmealcost);
+                    $("#tip").text(vartip);
+                    $("#total").text(vartotal);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Tip Computer</h1>
+        <p>Meal cost: <input type="text" id="mealcost"><button type="button" id="compute">Compute</button></p>
+        <p>Tip: <span id="tip"></span></p>
+        <p>Total: <span id="total"></span></p>
+    </body>
+</html>

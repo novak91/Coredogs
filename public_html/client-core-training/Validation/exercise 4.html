@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Exercise 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            body{
+                background-color: #FFFFEE;
+            }
+        </style>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#input").focus();
+                $("#button").click(function(){
+                    result = $("#input").val();
+                    if (result ==''){
+                        alert('Please enter your answer');
+                    }
+                    else if (isNaN(result)){
+                        alert('Please enter a number');
+                    }
+                    else if (result < 14){
+                        alert('Sorry, that is too low.');
+                    }
+                    else if (result > 14){
+                        alert('Sorry, that is too high.');
+                    }
+                    else if (result == 14){
+                        alert('You got it right!');
+                    }
+                });               
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Math Quiz</h1>
+        <p>What is 2 + 3 x 4? 
+            <input type="text" id="input">
+        </p>
+        <p>
+            <button type="button" id="button">Check</button>
+        </p>
+    </body>
+</html>

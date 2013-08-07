@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Exercise 7</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#beans").focus();
+                $("#button").click(function(){
+                    beans = $("#beans").val();
+                    metal = $("#metal").val();
+                    if (beans > 0 && metal > 0){
+                        total = parseFloat(beans * 12) + parseFloat(metal * 3);
+                        $("#total").text(total);
+                    }
+                    else if (beans == "" || metal == ""){
+                        alert ('Please enter number in both fields');
+                    }
+                    else if (isNaN (beans) || isNaN(metal)){
+                        alert ('Please enter only numbers');
+                    }
+                    else if (beans < 0 || metal < 0){
+                        alert ('Please enter only non-negative numbers');
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Order</h1>
+        <p>
+            Magic beans ($12 each): 
+            <input type="text" id="beans">
+        </p>
+        <p>
+            Strange metal thing ($3 each):
+            <input type="text" id="metal">
+        </p>
+        <p>
+            <button type="button" id="button">Compute total</button>
+        </p>
+        <p>
+            Total: <span id="total"></span>
+        </p>
+    </body>
+</html>

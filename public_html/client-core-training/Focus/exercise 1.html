@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <title>Hello World 3</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#showname").hide('fast');
+                $("#first_name").focus();
+                $("#click").click(function(){
+                    firstname = $("#first_name").val();
+                    lastname = $("#last_name").val();
+                    $("#showname").text("Hello " + firstname + " " + lastname + "!");
+                    $("#showname").show('fast');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>Please type your first and last name and click the button.</p>
+        <input type="text" id="first_name">
+        <input type="text" id="last_name">
+        <button id="click">Enter</button>
+        <h2 id="showname"></h2>
+    </body>
+</html>

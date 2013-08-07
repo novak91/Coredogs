@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Add Two Numbers</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#first_number").focus();
+        $("#compute_button").click(function() {
+          var first_number = $("#first_number").val();
+          var second_number = $("#second_number").val();
+          var sum = parseFloat(first_number) + parseFloat(second_number);
+          $("#sum").text(sum);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Add Two Numbers</h1>
+    <p>
+      Type in two numbers, and I will tell you their sum.
+    </p>
+    <p>
+      First number:<br>
+      <input type="input" id="first_number">
+    </p>
+    <p>
+      Second number:<br>
+      <input type="input" id="second_number">
+    </p>
+    <p>
+      <button type="button" id="compute_button">Compute</button>
+    </p>
+    <p>Sum: <span id="sum"></span></p>
+  </body>
+</html>

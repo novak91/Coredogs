@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Exercise 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- CSS -->
+        <style type="text/css">
+            h1{
+                background-color: #7C8B9B;
+                color: white;
+            }
+            body{
+                background-color: #E5EBDF;
+            }
+            .animal{
+                cursor: pointer;
+            }
+            .strike{
+                text-decoration: line-through;
+                cursor: default;
+            }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                order = "";
+                $("#cat").bind('click', function(){
+                    $("#cat").unbind('click');
+                    order = order + ("cat ");
+                    $("#order").text(order + ' ');
+                    $("#cat").addClass("strike");                 
+                });
+                $("#dog").bind('click', function(){
+                    $("#dog").unbind('click');
+                    order = order + ("dog ");
+                    $("#order").text(order + ' ');
+                    $("#dog").addClass("strike");
+                });
+                $("#goat").bind('click', function(){
+                    $("#goat").unbind('click');
+                    order = order + ("goat ");
+                    $("#order").text(order + ' ');
+                    $("#goat").addClass("strike");
+                });
+                $("#kangaroo").bind('click', function(){
+                    $("#kangaroo").unbind('click');
+                    order = order + ("kangaroo ");
+                    $("#order").text(order + ' ');
+                    $("#kangaroo").addClass("strike");
+                });
+                $("#koala").bind('click', function(){
+                    $("#koala").unbind('click');
+                    order = order + ("koala ");
+                    $("#order").text(order + ' ');
+                    $("#koala").addClass("strike");
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Cute animals</h1>
+        <p>By Kieran Mathieson and Gengis Khan</p>
+        <p>
+            Here are some cute animals. Click on the cutest one first, then the next<br>
+            cutest, and so on.
+        </p>
+        <ul>
+            <li class="animal" id="cat">Cat</li>
+            <li class="animal" id="dog">Dog</li>
+            <li class="animal" id="goat">Goat</li>
+            <li class="animal" id="kangaroo">Kangaroo</li>
+            <li class="animal" id="koala">Koala</li>
+        </ul>
+    <p>
+        Your cute order:<br>
+        <span id="order"></span>
+    </p>
+</body>
+</html>

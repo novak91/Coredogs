@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <title>Dog joke</title>
+        <style type="text/css">
+            #toggle_answer:hover {
+                cursor: pointer
+            }
+        </style>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#answer").hide();
+                $("#toggle_answer").click(function() {
+                    $("#answer").toggle('fast');
+                });  
+            });
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>A Dog Joke</h1>
+        <p>What do you get if you cross a Red Setter with a Pointer?</p>
+        <p id="toggle_answer">Show/hide the answer</p>
+        <blockquote id="answer">
+            A Pointsetter, the Christmas dog.
+        </blockquote>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <title>Seconds</title>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#compute_seconds").click(function(){
+        hours = prompt ('How many hours do you dance?');
+        minutes = prompt ('How many minutes do you dance?');
+        seconds = hours*60*60 + minutes*60;
+        alert ('You dance ' + seconds + 'seconds');
+      });
+    });
+  </script>
+  <body>
+    <p>
+      <button type="button" id="compute_seconds">Calculate</button>
+    </p>
+  </body>
+</html>

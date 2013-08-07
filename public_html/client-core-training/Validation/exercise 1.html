@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Exercise 1</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#button").click(function(){
+                    animal = $("#input").val();
+                    if (animal == ''){
+                        alert('Please enter your favorite animal')
+                    }
+                }) 
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Favorite animal</h1>
+        <p>What is your favorite animal? <input type="text" id="input"></p>
+        <p><button type="button" id="button">Go!</button>
+    </body>
+</html>

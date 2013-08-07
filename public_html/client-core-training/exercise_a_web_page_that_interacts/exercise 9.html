@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Exercise 9</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- CSS -->
+        <style type="text/css">
+            h1{
+                background-color: #7C8B9B;
+                color: white;
+            }
+            body{
+                background-color: #E5EBDF;
+            }
+            .order{
+                cursor: pointer;
+            }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    size = "";
+                    flavor = "";
+                    frosting = "";
+                //SIZE
+                $("#large").click(function(){
+                    $("#size").text('large')
+                    size = "chosen";
+                })
+                $("#medium").click(function(){
+                    $("#size").text('medium')
+                    size = "chosen";
+                })
+                $("#small").click(function(){
+                    $("#size").text('small')
+                    size = "chosen";
+                })
+                //FLAVOR
+                $("#fl_chocolate").click(function(){
+                    $("#flavor").text('chocolate')
+                    flavor = "chosen";
+                })
+                $("#fl_vanilla").click(function(){
+                    $("#flavor").text('vanilla')
+                    flavor = "chosen";
+                })
+                //FROSTING
+                $("#fr_chocolate").click(function(){
+                    $("#frosting").text('chocolate')
+                    frosting = "chosen";
+                })
+                $("#fr_vanilla").click(function(){
+                    $("#frosting").text('vanilla')
+                    frosting = "chosen";
+                })
+                //BUTTON
+                $("#button").click(function(){
+                    if ( size == "" | flavor == "" | frosting == ""){
+                        alert('Please fill all elements in your order');
+                    }
+                    else {
+                        alert('Thank you for your order.');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Order Your Cake</h1>
+        <p>Please click on one option in each category</p>
+        <h3>Size</h3>
+        <ul>
+            <li class="order" id="large">Large</li>
+            <li class="order" id="medium">Medium</li>
+            <li class="order" id="small">Small</li>
+        </ul>
+        <h3>Flavor</h3>
+        <ul>
+            <li class="order" id="fl_chocolate">Chocolate</li>
+            <li class="order" id="fl_vanilla">Vanilla</li>
+        </ul>
+        <h3>Frosting</h3>
+        <ul>
+            <li class="order" id="fr_chocolate">Chocolate</li>
+            <li class="order" id="fr_vanilla">Vanilla</li>
+        </ul>
+        <h2>Your cake</h2>
+        <p>Size: <span id="size"></span></p>
+        <p>Flavor: <span id="flavor"></span></p>
+        <p>Frosting: <span id="frosting"></span></p>
+        <p><button type="button" id="button">Order</button></p>
+    </body>
+</html>

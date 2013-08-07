@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Count the goodies</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" 
+                src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var donuts = 0;
+                var muffin = 0;
+                $("#donuts_sold").click(function(){
+                    donuts ++;
+                });
+                $("#muffins_sold").click(function(){
+                    muffin ++;
+                });
+                $("#sales").click(function(){
+                    alert("Current sales are:\nMuffins: " + muffin + "\nDonuts: " + donuts);
+                });
+                $("#reset").click(function(){
+                    donuts = 0;
+                    muffin = 0;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="donuts_sold" type="button">Sold donut</button></br>
+        <button id="muffins_sold" type="button">Sold muffin</button></br>
+        <button id="sales" type="button">Show sales</button></br>
+        <button id="reset" type="button">Reset</button>
+    </body>
+</html>

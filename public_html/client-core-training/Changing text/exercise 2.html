@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#add_passenger_car").click(function() {
+                    $("#train").text( $("#train").text() + ' passenger' );
+                });
+                $("#add_freight_car").click(function() {
+                    $("#train").text( $("#train").text() + ' freight' );
+                });
+                $("#clear").click(function() {
+                    $("#train").text('Engine');
+                });
+            });
+        </script>
+        <title>Make a train</title>
+        <style type="text/css">
+            body {
+                background-color: #FFFFEE;
+                font-family: Verdana, sans-serif;
+                font-size: 14px;
+            }
+            #clear,
+            #add_passenger_car,
+            #add_freight_car {
+                cursor: pointer;
+            }
+            #train {
+                font-weight: bold;
+            }
+        </style>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h1>Make a train</h1>
+        <p id="add_passenger_car">Add passenger car</p>
+        <p id="add_freight_car">Add freight car</p>
+        <p id="clear">Clear</p>
+        <h2>Your train</h2>
+        <p id="train">Engine</p>
+    </body>
+</html>

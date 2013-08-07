@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Exercise 2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#a").focus();
+                $("#button").click(function(){
+                    a = $("#a").val();
+                    b = $("#b").val();
+                    c = Math.sqrt(parseFloat(a*a) + parseFloat(b*b));
+                    $("#hypotenuse").text('The length of hypotenuse is: ' + c);
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Pythagorean theorem</h1>
+        <p><strong>Theory:</strong> In any right triangle, the area of the square whose side is the hypotenuse<br> 
+            (the side opposite the right angle) is equal to the sum of the areas of the squares<br>
+            whose sides are the two legs (the two sides that meet at a right angle).
+        </p>
+        <p>
+            Formula: c<sup>2</sup>= a<sup>2</sup> + b<sup>2</sup>
+        </p>
+        <h4>Calculate length of a hypotenuse <strong>c</strong></h4>
+        <p>Enter length of side <strong>a</strong>
+            <input type="text" id="a">
+        </p>
+        <p>Enter length of side <strong>b</strong>
+            <input type="text" id="b">
+        </p>
+        <p><button type="button" id="button">Calculate</button>
+        <p id="hypotenuse"></p>
+    </body>
+</html>

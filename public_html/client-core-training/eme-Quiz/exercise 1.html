@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>eMe-Quiz</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="exercise1.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //hide all answers at page load
+                $("#q1_correct").hide();
+                $("#q2_correct").hide();
+                $("#q3_correct").hide();
+                $("#q4_correct").hide();
+                $("#q5_correct").hide();
+                $("#q1_incorrect").hide();
+                $("#q2_incorrect").hide();
+                $("#q3_incorrect").hide();
+                $("#q4_incorrect").hide();
+                $("#q5_incorrect").hide();
+                //show text if Q1 is answered
+                $(".q1_right").click(function(){
+                    $("#q1_correct").show();
+                    $("#q1_incorrect").hide();
+                });
+                $(".q1_wrong").click(function(){
+                    $("#q1_correct").hide();
+                    $("#q1_incorrect").show();
+                });
+                //show text if Q2 is answered
+                $(".q2_right").click(function(){
+                    $("#q2_correct").show();
+                    $("#q2_incorrect").hide();
+                });
+                $(".q2_wrong").click(function(){
+                    $("#q2_correct").hide();
+                    $("#q2_incorrect").show();
+                });
+                //show text if Q3 is answered
+                $(".q3_right").click(function(){
+                    $("#q3_correct").show();
+                    $("#q3_incorrect").hide();
+                });
+                $(".q3_wrong").click(function(){
+                    $("#q3_correct").hide();
+                    $("#q3_incorrect").show();
+                });
+                //show text if Q4 is answered
+                $(".q4_right").click(function(){
+                    $("#q4_correct").show();
+                    $("#q4_incorrect").hide();
+                });
+                $(".q4_wrong").click(function(){
+                    $("#q4_correct").hide();
+                    $("#q4_incorrect").show();
+                });
+                //show text if Q5 is answered
+                $(".q5_right").click(function(){
+                    $("#q5_correct").show();
+                    $("#q5_incorrect").hide();
+                });
+                $(".q5_wrong").click(function(){
+                    $("#q5_correct").hide();
+                    $("#q5_incorrect").show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Quiz</h1>
+        <p>Please click the right answers</p>
+        <!-- Question 1 -->
+        <h3>Q1 Which is the most populated city in the world?</h2>
+        <p class="q1_wrong"><strong>a)</strong> Beijing</p>
+        <p class="q1_right"><strong>b)</strong> Mexico City</p>
+        <p class="q1_wrong"><strong>c)</strong> New York</p>
+        <p id="q1_correct"><strong>Correct Answer! (b)</strong></p>
+        <p id="q1_incorrect"><strong>Wrong Answer!</strong></p>
+        <!-- Question 2 -->
+        <h3>Q2 Which actor played king Leonidas in the movie "300"?</h2>
+            <p class="q2_wrong"><strong>a)</strong> George Clooney</p>
+            <p class="q2_wrong"><strong>b)</strong> Steven Saegal</p>
+            <p class="q2_right"><strong>c)</strong> Gerald Butler</p>
+            <p id="q2_correct"><strong>Correct Answer! (c)</strong></p>
+            <p id="q2_incorrect"><strong>Wrong Answer!</strong></p>
+            <!-- Question 3 -->
+            <h3>Q3 Which country is most populated in the world?</h2>
+                <p class="q3_right"><strong>a)</strong> China</p>
+                <p class="q3_wrong"><strong>b)</strong> Russia</p>
+                <p class="q3_wrong"><strong>c)</strong> Brazil</p>
+                <p id="q3_correct"><strong>Correct Answer! (a)</strong></p>
+                <p id="q3_incorrect"><strong>Wrong Answer!</strong></p>
+                <!-- Question 4 -->
+                <h3>Q4 Which of the following OS is considered to be open-source?</h2>
+                    <p class="q4_wrong"><strong>a)</strong> Windows 7</p>
+                    <p class="q4_wrong"><strong>b)</strong> Mac OS X Lion</p>
+                    <p class="q4_right"><strong>c)</strong> Linux Ubuntu</p>
+                    <p id="q4_correct"><strong>Correct Answer! (c)</strong></p>
+                    <p id="q4_incorrect"><strong>Wrong Answer!</strong></p>
+                    <!-- Question 5 -->
+                    <h3>Q5 Which of the following car brands has its origin in France?</h2>
+                        <p class="q5_right"><strong>a)</strong> Peugeot</p>
+                        <p class="q5_wrong"><strong>b)</strong> Mercedes-Benz</p>
+                        <p class="q5_wrong"><strong>c)</strong> Skoda</p>
+                        <p id="q5_correct"><strong>Correct Answer! (a)</strong></p>
+                        <p id="q5_incorrect"><strong>Wrong Answer!</strong></p>
+
+                        </body>
+                        </html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <title>Oblivion cities</title>
+        <script>
+            $(document).ready(function() {
+                $(".fake").click(function() {
+                    $("#fake_city").addClass("highlight");
+                    $("#real_city").removeClass("highlight");
+                });
+                $(".real").click(function() {
+                    $("#real_city").addClass("highlight");
+                    $("#fake_city").removeClass("highlight");
+                });
+            });
+        </script>
+        <style type="text/css">
+            body {
+                background-color: #FFFFEE;
+                font-family: Verdana, sans-serif;
+                font-size: 14px;
+            }
+            .real, .fake {
+                cursor: pointer;
+            }
+            .highlight {
+                font-size: 16px;
+                font-weight: bold;
+                color: #660000;
+            }
+        </style>
+        <script type="text/javascript">
+            JavaScript goes here.
+        </script>
+    </head>
+    <body>
+        <h1>Oblivion cities</h1>
+        <p>
+            Which of the following are cities in Cyrodiil?
+            Guess whether each one is real (in the game) or 
+            fake. Click on it to see the answer.</p>
+        <ul>
+            <li class="fake">Arcasha</li>
+            <li class="real">Kvatch</li>
+            <li class="real">Cheydinhal</li>
+            <li class="fake">Xenithar</li>
+            <li class="fake">Vercingetorix</li>
+            <li class="real">Skingrad</li>
+        </ul>
+        <p id="real_city">Real</p>
+        <p id="fake_city">Fake</p>
+    </body>
+</html>

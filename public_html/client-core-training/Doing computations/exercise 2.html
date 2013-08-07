@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <title>Kilos to Pounds</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#input").focus();
+                $("#button").click(function(){
+                    varkilos = $("#input").val();
+                    varpounds = varkilos*2.2;
+                    $("#pound").text(varpounds);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Kilos to Pounds</h1>
+        <p>Kilos: <input type="text" id="input"><button type="button" id="button">Convert</button></p>
+        <p>Pounds: <span id="pound"></span></p>
+    </body>
+</html>

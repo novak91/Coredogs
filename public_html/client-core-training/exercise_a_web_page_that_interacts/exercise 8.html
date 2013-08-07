@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Exercise 8</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- CSS -->
+        <style type="text/css">
+            h1{
+                background-color: #7C8B9B;
+                color: white;
+            }
+            body{
+                background-color: #E5EBDF;
+            }
+            #winner{
+                color: red;
+            }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+             $("#KM").focus();
+             $("#output").hide();
+             $("#button").click(function(){
+                 km = $("#KM").val();
+                 ms = km - 1;
+                 $("#MS").val(ms);
+                 $("#output").show();
+             });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Vampire Fighters</h1>
+        <p>KM is a renowned vampire fighter. MS is..., wel he tries.</p>
+        <p>
+            Enter the number of vampires killed by KM and MS. Then click the <strong>Compute</strong><br>
+            <strong>winner</strong> button.
+        </p>
+        <p>
+            Vampires killed by KM<br>
+            <input type="text" id="KM">
+        </p>
+        <p>
+            Vampires killed by MS<br>
+            <input type="text" id="MS">
+        </p>
+        <p>
+            <button type="button" id="button">Compute winner</button>
+        </p>
+        <div id="output">
+            <h2 id="winner">KM wins!</h1>
+            <h3>Buffy likes KM. MS dissapoints her, in so many ways.</h2>           
+        </div>
+
+</body>
+</html>

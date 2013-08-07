@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Exercise 11</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- CSS -->
+        <style type="text/css">
+            .click{
+                cursor: pointer;
+            }
+            body{
+                font-family: Verdana, sans-serif;
+                font-size: 14px;
+            }
+        </style>
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#domestication").hide();
+                $("#origin").hide();
+                
+                $("#domestication_arrow_up").hide();
+                $("#origin_arrow_up").hide();
+                
+                $("#click_domestication").click(function(){
+                    $("#domestication").toggle('medium');
+                    $("#domestication_arrow_down").toggle();
+                    $("#domestication_arrow_up").toggle();
+                })
+                
+                $("#click_origin").click(function(){
+                    $("#origin").toggle('medium');
+                    $("#origin_arrow_down").toggle();
+                    $("#origin_arrow_up").toggle();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Dogs</h1>
+        <p>Click the titles to learn about dogs.</p>
+        <p><sub><i>Information from Wikipedia</i></sub></p>
+        <p class="click" id="click_domestication">
+            <span id="domestication_arrow_down">↓</span>
+            <span id="domestication_arrow_up">↑</span> 
+            Domestication
+        <p id="domestication">
+            Dogs were domesticated from gray wolves about 15,000 <br>
+            years ago. They must have been very valuable to early <br>
+            human settlements, for they quickly became ubiquitous <br>
+            across world cultures.
+        </p>
+        <p class="click" id="click_origin">
+            <span id="origin_arrow_down">↓</span>
+            <span id="origin_arrow_up">↑</span>
+            Origin of the name
+        <p id="origin">
+            The term "domestic dog" is generally used for both<br>
+            domesticated and feral varieties. The dog may have been<br>
+            the first animal to be domesticated, and has been the most<br>
+            widely kept working, hunting, and pet in human history.
+        </p>
+    </p>
+</p>
+
+</body>
+</html>

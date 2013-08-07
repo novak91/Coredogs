@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Instructions</title>
+        <style type="text/css">
+            #instructions_title_show:hover {
+                cursor: pointer;
+                color: greenyellow;
+            }
+            #instructions_title_hide:hover {
+                cursor: pointer;
+                color: red;
+            }
+        </style>pcpc
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#instructions").hide();
+            $("#instructions_title_hide").hide();
+            $("#instructions_title_show").click(function() {
+                $("#instructions").show('fast');
+                $("#instructions_title_show").hide();
+                $("#instructions_title_hide").show();
+            });
+            $("#instructions_title_hide").click(function() {
+                $("#instructions").hide('fast');
+                $("#instructions_title_hide").hide();
+                $("#instructions_title_show").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Please fill in this form:</p>
+    <p id="instructions_title_show"><strong>Show instructions v</strong></p>
+    <p id="instructions_title_hide"><strong>Hide instructions ^</strong></p>
+    <blockquote id="instructions">
+        Helpy help help.
+    </blockquote>
+    <p>FORM</p>
+
+</body>
+</html>

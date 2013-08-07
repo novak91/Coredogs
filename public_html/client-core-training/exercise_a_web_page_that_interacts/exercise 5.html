@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Exercise 5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#d").focus();
+                $("#button").click(function(){
+                    d = $("#d").val();
+                    if (d < 0) {
+                        alert('Please enter number higher than zero');
+                    }
+                    else if (isNaN (d)) {
+                        alert('Please enter a number');
+                    }
+                    else if (d == '') {
+                        alert('Please enter a number');
+                    }
+                    else if (d > 0){
+                    c = d * Math.PI;
+                    $("#c").text('The circumference of the circle is ' + c);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Circumference of a circle</h1>
+        <p><strong>Theory:</strong> Circumference is the linear distance around the outside<br>
+            of a closed curve or circular object. The circumference of a circle is the length <br>
+            around it.
+        </p>
+        <p>
+            <strong>Formula: </strong> c = &#928 * d <br>
+            where:<br>
+        <ul>
+            <li>c = circumference</li>
+            <li>&#928 = pi</li>
+            <li>d = diameter</li>
+        </ul>            
+        </p>
+        <h4>Calculate the circumference of a circle <strong>c</strong></h4>
+        <p>Enter length of diameter <strong>d</strong>
+            <input type="text" id="d">
+        </p>
+        <p><button type="button" id="button">Calculate</button>
+        <p id="c"></p>
+</body>
+</html>
